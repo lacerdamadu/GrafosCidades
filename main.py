@@ -28,7 +28,7 @@ def main():
     
     try:
         linhas = LeituraArquivo(NomeArquivo)
-        grafo = ListaAdjacencia()
+        grafo = ListaAdjacencia.ListaAdjacencia()
         
         for linha in linhas:
             if len(linha) >= 3:  # Verifica se tem vértice1, vértice2, peso

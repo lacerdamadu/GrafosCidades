@@ -1,4 +1,5 @@
 import ListaEncadeada
+
 class ListaAdjacencia:
     def __init__(self):
         self.Dic = {}

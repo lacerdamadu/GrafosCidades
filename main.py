@@ -1,4 +1,5 @@
 import ListaAdjacencia
+import Articulacoes
 
 def LeituraArquivo(NomeArquivo):
     arq = open(NomeArquivo)
@@ -40,6 +41,7 @@ def main():
         print(f"Erro: Arquivo '{NomeArquivo}' não encontrado!")
     except Exception as e:
         print(f"Erro inesperado: {e}")
+
 
 if __name__ == "__main__":
     main()

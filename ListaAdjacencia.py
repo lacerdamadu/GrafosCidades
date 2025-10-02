@@ -26,3 +26,24 @@ class ListaAdjacencia:
 
     def ObterVertices(self):
         return list(self.Dic.keys())
+    
+    def ObterNumCidades(self):
+        return len(self.Dic)
+    
+    def ObterNumEstradas(self):
+        somadegraus = 0
+        for vertice in self.Dic.keys():
+            current = self.Dic[vertice].cabeca
+            while current:
+                somadegraus += 1
+                current = current.proximo
+
+        return (somadegraus//2)
+    
+    def RetornarVizinhos(self, vertice):
+        lista = []
+        current = self.Dic[vertice].cabeca
+        while current:
+            lista.append(current.dado)
+            current = current.proximo
+        return lista

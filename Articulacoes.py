@@ -31,14 +31,10 @@ class PontosArticulacoes:
             self.pai[vertice] = None
         
         #Realiza a busca em profundidade para os vértices que não foram visitados
-        inicio = 0
         for vertice in self.grafo.Dic.keys():
             if not self.visitado[vertice]:
-                print(f"Iniciando o subgrafo conexo em {vertice}")
                 self._dfs(vertice)
-                if inicio != 0:
-                    print("Grafo desconexo")
-                inicio += 1
+   
         
         return self.articulacoes
 

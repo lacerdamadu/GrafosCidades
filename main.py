@@ -36,10 +36,13 @@ def main():
         
         grafo.ImprimirGrafo()
         
+        print("Tem ciclo:",grafo.Ciclos())
+
     except FileNotFoundError:
         print(f"Erro: Arquivo '{NomeArquivo}' não encontrado!")
     except Exception as e:
         print(f"Erro inesperado: {e}")
+
 
 if __name__ == "__main__":
     main()

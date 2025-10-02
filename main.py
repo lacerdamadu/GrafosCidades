@@ -35,8 +35,28 @@ def main():
                 grafo.InserirAresta(linha[0], linha[1], linha[2])
         
         grafo.ImprimirGrafo()
-        
-        print("Tem ciclo:",grafo.Ciclos())
+
+        #so um teste generico, pedi o deep pra escrever
+#-----------------------------------------------------------------------------------------------
+        print("Tem ciclo:", grafo.Ciclos())
+
+        # Testar quantidade de vizinhos
+        cidade = input("Digite uma cidade para ver a quantidade de vizinhos: ")
+        print(f"Quantidade de vizinhos de {cidade}: {grafo.QuantidadeVizinhos(cidade)}")
+
+        # Testar menor caminho
+        origem = input("Origem: ")
+        destino = input("Destino: ")
+        dist, caminho = grafo.MenorCaminho(origem, destino)
+        if dist is None:
+            print("Não existe caminho entre as cidades.")
+        else:
+            print(f"Menor distância {origem} -> {destino} = {dist}")
+            print("Caminho:", " -> ".join(caminho))
+
+        # Testar se a rede é conexa
+        print("A rede é conexa?", grafo.RedeConexa())
+#--------------------------------------------------------------------------------------
 
     except FileNotFoundError:
         print(f"Erro: Arquivo '{NomeArquivo}' não encontrado!")
@@ -46,3 +66,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

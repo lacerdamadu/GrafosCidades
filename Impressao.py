@@ -46,10 +46,9 @@ class Grafo:
         plt.show()
     
 
-print("Bem-vindo a bibliotecas para manipulação de grafos!")
-NomeArquivo = input("Digite o nome do arquivo(incluindo o formato) a ser lido: ")
-
-linhas = LeituraArquivo(NomeArquivo)
 G = Grafo()
-G.Insere(linhas)
-G.Impressao()
+def Imprimir(NomeArquivo):
+    linhas = LeituraArquivo(NomeArquivo)
+    G.Insere(linhas)
+    G.Impressao()
+    return

@@ -64,7 +64,7 @@ class ListaAdjacencia:
     #---------------------------------------------------------------------------#  
     
     def CalculaCiclos(self,v, pai, caminho, inicio,ciclos):
-        caminho.append(v)   #quarda um verticie em um caminho atual 
+        caminho.append(v)   #guarda um verticie em um caminho atual 
 
         atual = self.Dic[v].cabeca
         while atual:
@@ -154,5 +154,3 @@ class ListaAdjacencia:
         inicio = next(iter(self.Dic))# pega um vértice random
         dfs(inicio)
         return len(visitados) == len(self.Dic)
-
-

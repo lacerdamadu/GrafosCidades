@@ -1,5 +1,4 @@
 import ListaAdjacencia
-import Articulacoes
 
 def LeituraArquivo(NomeArquivo):
     arq = open(NomeArquivo)
